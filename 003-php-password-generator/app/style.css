@@ -1,0 +1,98 @@
+/* Couleurs froides */
+:root {
+    --color-bg: #e0f7fa;        /* bleu clair */
+    --color-primary: #4dd0e1;   /* turquoise */
+    --color-accent: #9575cd;    /* violet clair */
+    --color-text: #004d40;      /* vert foncé pour le texte */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 1rem;
+}
+
+form {
+    background-color: white;
+    padding: 2rem 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;        /* important pour le responsive */
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+/* Checkboxes */
+input[type="checkbox"] {
+    accent-color: var(--color-accent);
+    margin-right: 0.5rem;
+}
+
+/* Select & Button */
+select, button {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+select {
+    background-color: #f1f8fb;
+}
+
+/* Bouton */
+button {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-accent);
+}
+
+/* Cadre du mot de passe généré (scrollable) */
+.generated-password {
+    background-color: #f1f8fb;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: 'Courier New', monospace;
+    overflow-x: auto;          /* scroll horizontal responsive */
+    white-space: nowrap;       /* pas de retour à la ligne */
+    margin-top: 1rem;
+}
+
+/* --- Responsive mobile --- */
+@media (max-width: 480px) {
+    form {
+        padding: 1.5rem;       /* réduit l'espace intérieur */
+    }
+
+    select, button {
+        font-size: 0.95rem;    /* un peu plus petit */
+        padding: 0.5rem;
+    }
+
+    .generated-password {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+}
